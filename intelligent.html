@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intelligence Dashboard | Sokoto State Hisbah Board</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/intelligence-dashboard.js"></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <img src="assets/logo.png" class="logo" alt="Hisbah Logo" />
+    <h1>Hisbah Intelligence Unit Dashboard</h1>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </header>
+
+  <section class="dashboard">
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#" id="sendReportBtn">🕵️‍♂️ Send Intelligence Report</a></li>
+        <li><a href="#" id="viewCommandsBtn">📢 View Commands</a></li>
+        <li><a href="#" id="historyBtn">📜 Report History</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <h2>Welcome, Intelligence Officer</h2>
+      <div id="intelContent">
+        <p>Select an option to begin your operation.</p>
+      </div>
+    </main>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Sokoto State Hisbah Board | Powered by Firebase</p>
+  </footer>
+</body>
+</html>

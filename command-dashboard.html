@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Command Dashboard | Sokoto State Hisbah Board</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/command-dashboard.js"></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <img src="assets/logo.png" class="logo" alt="Hisbah Logo">
+    <h1>Hisbah Command Officer Dashboard</h1>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </header>
+
+  <section class="dashboard">
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#" id="viewReportsBtn">📋 Reports</a></li>
+        <li><a href="#" id="sendCommandBtn">📢 Send Command</a></li>
+        <li><a href="#" id="viewSummaryBtn">📊 Summary</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <h2>Welcome, Command Officer</h2>
+      <div id="commandContent">
+        <p>Select a function from the sidebar to begin.</p>
+      </div>
+    </main>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Sokoto State Hisbah Board | Powered by Firebase</p>
+  </footer>
+</body>
+</html>

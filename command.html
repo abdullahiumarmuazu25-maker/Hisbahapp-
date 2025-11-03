@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Command Login | Hisbah App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="auth-container">
+    <img src="assets/logo.png" alt="Hisbah Logo" class="logo">
+    <h2>Command Login</h2>
+
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button class="btn" type="submit">Login</button>
+    </form>
+
+    <p>Register new user? <a href="register.html">Register</a></p>
+  </div>
+
+  <script type="module">
+    import { loginUser, redirectByRole } from './js/auth.js';
+    const form = document.getElementById("loginForm");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = form["email"].value;
+      const password = form["password"].value;
+      try {
+        await loginUser(email, password);
+        redirectByRole("command");
+      } catch (err) {
+        alert("Login error: " + err.message);
+      }
+    });
+  </script>
+</body>
+</html>
